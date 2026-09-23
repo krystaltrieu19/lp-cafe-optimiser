@@ -1,0 +1,65 @@
+# Menu based on Susu Lane (18 Park Lane, Chippendale, Sydney), a specialty cafe opened in 2025.
+# unit_price: sourced from their specialty drinks menu
+# unit_cost: estimated from Australian wholesale ingredient benchmarks
+# demand_*: estimated from comparable small Sydney cafe benchmarks; to be replaced with real sales data
+
+products:
+  - name: Tiramisu Iced Latte
+    unit_price: 10.00     # real menu price
+    unit_cost: 2.10       # espresso $0.65 + milk $0.25 + tiramisu cream $0.60 + ladyfinger $0.20 + cup/ice $0.40
+    prep_time_min: 4
+    is_integer: true
+    demand_low: 8
+    demand_expected: 20
+    demand_high: 40
+
+  - name: Strawberry Matcha
+    unit_price: 9.50      # real menu price
+    unit_cost: 1.99       # matcha $0.84 + milk $0.35 + strawberry puree $0.40 + cup/ice $0.40
+    prep_time_min: 3
+    is_integer: true
+    demand_low: 10
+    demand_expected: 22
+    demand_high: 42
+
+  - name: Coconut Cloud Matcha
+    unit_price: 9.50      # real menu price
+    unit_cost: 1.94       # matcha $0.84 + coconut milk $0.45 + coconut foam $0.25 + cup/ice $0.40
+    prep_time_min: 4
+    is_integer: true
+    demand_low: 8
+    demand_expected: 18
+    demand_high: 35
+
+  - name: Tiramisu Top Matcha Latte
+    unit_price: 12.50     # real menu price
+    unit_cost: 2.39       # matcha $0.84 + milk $0.35 + tiramisu cream $0.60 + ladyfinger $0.20 + cup/ice $0.40
+    prep_time_min: 5
+    is_integer: true
+    demand_low: 5
+    demand_expected: 12
+    demand_high: 25
+
+  - name: Jasmine Matcha Cold Foam
+    unit_price: 9.50      # real menu price
+    unit_cost: 1.74       # matcha $0.84 + jasmine tea $0.15 + milk/foam $0.35 + cup/ice $0.40
+    prep_time_min: 4
+    is_integer: true
+    demand_low: 6
+    demand_expected: 15
+    demand_high: 30
+
+  - name: Coconut Iced Latte
+    unit_price: 7.50      # real menu price
+    unit_cost: 1.50       # espresso $0.65 + coconut milk $0.45 + cup/ice $0.40
+    prep_time_min: 2
+    is_integer: true
+    demand_low: 10
+    demand_expected: 20
+    demand_high: 38
+
+constraints:
+  daily_budget: 150.00       # max spend on ingredients per day (AUD)
+  daily_labor_min: 480       # total prep minutes available per day (8 hours)
+  min_quantity_per_product: 5
+  max_quantity_per_product: 50
